@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="english">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Details</title>
+  <!-- Add your CSS styles and dependencies here -->
+</head>
+<body>
+<div class="container">
+  <h1>Book Details</h1>
+  <h2 th:text="${book.title}"></h2>
+  <p>Author: <span th:text="${book.author}"></span></p>
+  <p>Price: Rs <span th:text="${book.price}"></span></p>
+  <a th:href="@{'/api/cart/add/' + ${book.id}}">Add to Cart</a>
+  <!-- Add more book details as needed -->
+</div>
+</body>
+</html>
